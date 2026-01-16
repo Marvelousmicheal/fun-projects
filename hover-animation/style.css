@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    font-family: sans-serif;
+    overflow-x: auto;
+}
+
+.list {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center; 
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    width: 100%;
+    height: 100vh;
+}
+
+.item {
+    width: 150px;
+    height: 300px;
+    flex-shrink: 0;
+    background-color: #3498db;
+    cursor: pointer;
+    /* Smoother, natural transition */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(0); /* Visible by default so user sees the track */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CENTER (HOVERED) ITEM */
+.list .item:hover {
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+
+/* RIGHT SIDE NEIGHBORS */
+.list .item:hover + * {
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(40deg);
+}
+.list .item:hover + * + * {
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(20deg);
+}
+.list .item:hover + * + * + * {
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateY(10deg);
+}
+
+/* LEFT SIDE NEIGHBORS */
+.list .item:has(+ *:hover) {
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(-40deg);
+}
+.list .item:has(+ * + *:hover) {
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateY(-20deg);
+}
+.list .item:has(+ * + * + *:hover) {
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateY(-10deg);
+}

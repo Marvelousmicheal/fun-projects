@@ -1,0 +1,267 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>testing div</h1>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Animation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      }
+
+      #lottie-container {
+        width: 53px;
+        height: 53px;
+      }
+    </style>
+  </head>
+    <body>
+    <div class="test">
+      <div id="lottie-container"></div>
+      <h1 class="heading">1</h1>
+    </div>
+
+    <script>
+      const animationData = {
+        v: "5.7.5",
+        fr: 100,
+        ip: 0,
+        op: 286,
+        w: 53,
+        h: 53,
+        nm: "Comp 1",
+        ddd: 0,
+        metadata: {},
+        assets: [],
+        layers: [
+          {
+            ddd: 0,
+            ind: 1,
+            ty: 3,
+            nm: "",
+            sr: 1,
+            ks: {
+              p: { a: 0, k: [0, 0], ix: 2 },
+              a: { a: 0, k: [0, 0], ix: 2 },
+              s: { a: 0, k: [100, 100], ix: 2 },
+              r: { a: 0, k: 0, ix: 2 },
+              o: { a: 0, k: 100, ix: 2 },
+              sk: { a: 0, k: 0, ix: 2 },
+              sa: { a: 0, k: 0, ix: 2 },
+            },
+            ao: 0,
+            ip: 0,
+            op: 287,
+            st: 0,
+            bm: 0,
+          },
+          {
+            ddd: 0,
+            ind: 2,
+            ty: 4,
+            nm: "Ellipse 42:0-stroke-mask",
+            sr: 1,
+            ks: {
+              p: { a: 0, k: [0, 0], ix: 2 },
+              a: { a: 0, k: [0, 0], ix: 2 },
+              s: { a: 0, k: [100, 100], ix: 2 },
+              r: { a: 0, k: 0, ix: 2 },
+              o: { a: 0, k: 100, ix: 2 },
+              sk: { a: 0, k: 0, ix: 2 },
+              sa: { a: 0, k: 0, ix: 2 },
+            },
+            td: 1,
+            ao: 0,
+            parent: 1,
+            shapes: [
+              {
+                ty: "gr",
+                nm: "Ellipse 42",
+                it: [
+                  {
+                    ty: "el",
+                    d: 1,
+                    s: { a: 0, k: [53, 53], ix: 2 },
+                    p: { a: 0, k: [0, 0], ix: 2 },
+                  },
+                  {
+                    ty: "tm",
+                    s: {
+                      a: 1,
+                      k: [
+                        {
+                          t: 86,
+                          s: [100],
+                          o: { x: [0.4], y: [0] },
+                          i: { x: [0.8], y: [1] },
+                        },
+                        {
+                          t: 186,
+                          s: [0],
+                          o: { x: [0.4], y: [0] },
+                          i: { x: [0.8], y: [1] },
+                        },
+                      ],
+                      ix: 2,
+                    },
+                    e: { a: 0, k: 100, ix: 2 },
+                    o: { a: 0, k: 0, ix: 2 },
+                    m: 1,
+                  },
+                  {
+                    ty: "tr",
+                    p: { a: 0, k: [26.5, 26.5], ix: 2 },
+                    a: { a: 0, k: [0, 0], ix: 2 },
+                    s: { a: 0, k: [100, 100], ix: 2 },
+                    r: { a: 0, k: 0, ix: 2 },
+                    o: { a: 0, k: 100, ix: 2 },
+                    sk: { a: 0, k: 0, ix: 2 },
+                    sa: { a: 0, k: 0, ix: 2 },
+                  },
+                ],
+              },
+              {
+                ty: "fl",
+                c: { a: 0, k: [0, 0, 0], ix: 2 },
+                o: { a: 0, k: 100, ix: 2 },
+                r: 1,
+                bm: 0,
+              },
+            ],
+            ip: 0,
+            op: 287,
+            st: 0,
+            bm: 0,
+          },
+          {
+            ddd: 0,
+            ind: 3,
+            ty: 4,
+            nm: "Ellipse 42:0",
+            sr: 1,
+            ks: {
+              p: { a: 0, k: [0, 0], ix: 2 },
+              a: { a: 0, k: [0, 0], ix: 2 },
+              s: { a: 0, k: [100, 100], ix: 2 },
+              r: { a: 0, k: 0, ix: 2 },
+              o: { a: 0, k: 100, ix: 2 },
+              sk: { a: 0, k: 0, ix: 2 },
+              sa: { a: 0, k: 0, ix: 2 },
+            },
+            tt: 1,
+            ao: 0,
+            parent: 1,
+            shapes: [
+              {
+                ty: "gr",
+                nm: "Ellipse 42",
+                it: [
+                  {
+                    ty: "el",
+                    d: 1,
+                    s: { a: 0, k: [53, 53], ix: 2 },
+                    p: { a: 0, k: [0, 0], ix: 2 },
+                  },
+                  {
+                    ty: "tm",
+                    s: {
+                      a: 1,
+                      k: [
+                        {
+                          t: 86,
+                          s: [100],
+                          o: { x: [0.4], y: [0] },
+                          i: { x: [0.8], y: [1] },
+                        },
+                        {
+                          t: 186,
+                          s: [0],
+                          o: { x: [0.4], y: [0] },
+                          i: { x: [0.8], y: [1] },
+                        },
+                      ],
+                      ix: 2,
+                    },
+                    e: { a: 0, k: 100, ix: 2 },
+                    o: { a: 0, k: 0, ix: 2 },
+                    m: 1,
+                  },
+                  {
+                    ty: "gs",
+                    o: { a: 0, k: 100, ix: 2 },
+                    bm: 0,
+                    g: {
+                      p: 2,
+                      k: {
+                        a: 0,
+                        k: [
+                          0, 0.34509803921568627, 0.984313725490196,
+                          0.8549019607843137, 1, 0.8549019607843137,
+                          0.16470588235294117, 0.8784313725490196, 0, 1, 1, 1,
+                        ],
+                        ix: 2,
+                      },
+                    },
+                    s: { a: 0, k: [0, -26.5], ix: 2 },
+                    e: { a: 0, k: [0, 26.5], ix: 2 },
+                    t: 1,
+                    w: { a: 0, k: 4, ix: 2 },
+                    lc: 1,
+                    lj: 1,
+                    ml: 4,
+                  },
+                  {
+                    ty: "tr",
+                    p: { a: 0, k: [26.5, 26.5], ix: 2 },
+                    a: { a: 0, k: [0, 0], ix: 2 },
+                    s: { a: 0, k: [100, 100], ix: 2 },
+                    r: { a: 0, k: 0, ix: 2 },
+                    o: { a: 0, k: 100, ix: 2 },
+                    sk: { a: 0, k: 0, ix: 2 },
+                    sa: { a: 0, k: 0, ix: 2 },
+                  },
+                ],
+              },
+            ],
+            ip: 0,
+            op: 287,
+            st: 0,
+            bm: 0,
+          },
+        ],
+        markers: [],
+      };
+
+      const animation = lottie.loadAnimation({
+        container: document.getElementById("lottie-container"),
+        renderer: "svg",
+        loop: false,
+        autoplay: true,
+        animationData: animationData,
+      });
+    </script>
+  </body>
+</html>

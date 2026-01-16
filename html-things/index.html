@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">
+        choose a color
+        <input type="color" list="theme-sunny" >
+    </label>
+    <datalist id="theme-sunny">
+        <option value="#9EF6FF"></option>
+        <option value="#FFED63"></option>
+        <option value="#FFCC31"></option>
+        <option value="#FFA32F"></option>
+        <option value="#FF8462"></option>
+    </datalist>
+
+    <input type="datetime-local">
+
+
+  <picture>
+    <!-- Large screens -->
+    <source srcset="image-desktop.jpg" media="(min-width: 800px)" />
+
+    <!-- Medium screens -->
+    <source srcset="image-tablet.jpg" media="(min-width: 500px)" />
+
+    <!-- Fallback -->
+    <img src="image-mobile.jpg" alt="Responsive example image" />
+  </picture>
+
+    <div id="box">
+    <p>This content can be clicked</p>
+    <button>Click me</button>
+    <input placeholder="Type here" />
+  </div>
+
+   <button id="toggle">Toggle Inert</button>
+
+
+
+    <form oninput="result.value = Number(a.value) + Number(b.value)">
+    <input type="number" id="a" value="0" />
+    +
+    <input type="number" id="b" value="0" />
+    =
+    <output name="result">0</output>
+  </form>
+
+   <script>
+    const box = document.getElementById("box");
+    const toggle = document.getElementById("toggle");
+
+    toggle.addEventListener("click", () => {
+      box.toggleAttribute("inert");
+    });
+  </script>
+</body>
+</html>

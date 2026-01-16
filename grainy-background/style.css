@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: black;
+   
+}
+
+.test{
+   
+    position: relative;
+}
+.heading {
+    font-size: 2em;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.container::after{
+
+content: '';
+position: absolute;
+height: 100%;
+width: 100%;
+ /* background-image: conic-gradient(from 0deg, transparent 0deg, transparent calc(360deg - var(--angle)), red calc(360deg - var(--angle))); */
+ /* background-image: conic-gradient(from 0deg, transparent 0deg, transparent calc(360deg - var(--angle)), oklch(0.8951 0.1427 176.66) calc(360deg - var(--angle)), oklch(0.6397 0.2734 326.66) calc(360deg - var(--angle) + 180deg), oklch(0.8951 0.1427 176.66) 360deg);
+  */
+  background-image: conic-gradient(from 0deg, transparent 0deg, transparent calc(360deg - var(--angle)), oklch(0.8951 0.1427 176.66) calc(360deg - var(--angle)), oklch(0.6397 0.2734 326.66) calc(360deg - var(--angle) + 90deg), oklch(0.6397 0.2734 326.66) calc(360deg - var(--angle) + 270deg), oklch(0.8951 0.1427 176.66) 360deg);
+top: 50%;
+ left: 50%;
+translate: -50% -50%;
+z-index: -1;
+padding: 5px;
+border-radius: 100%;
+animation: 3s spin linear forwards;
+}
+
+
+@keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
